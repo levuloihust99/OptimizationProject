@@ -1,0 +1,9 @@
+python -m main --N 6 --K 2
+python -m main --N 14 --K 6
+python -m main --N 49 --K 9
+python -m main --N 99 --K 20
+python -m main --N 499 --K 20
+python -m main --N 499 --K 50
+python -m main --N 999 --K 20
+python -m main --N 999 --K 50
+python -m main --N 999 --K 100

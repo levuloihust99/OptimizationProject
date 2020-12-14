@@ -1,18 +1,20 @@
 import argparse
 import logging
+import numpy as np
 import os
 import random
 from tqdm import tqdm
+import time
 
 from utils import read_input, random_chunk, clone
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--input", type=str)
-parser.add_argument("--id", type=int)
+parser.add_argument("--repeat", type=int, default=10)
+parser.add_argument("--N", type=int, required=True)
+parser.add_argument("--K", type=int, required=True)
 args = parser.parse_args()
 
-logs_path = os.path.join("logs", args.input.split("data/")[-1])
-logs_path = logs_path.replace(".", f"_{args.id}.")
+logs_path = os.path.join("logs", f"{args.N}_{args.K}.txt")
 logging.basicConfig(filename=logs_path,
                     filemode='w',
                     format='%(asctime)s, %(levelname)s: %(message)s',
@@ -24,12 +26,15 @@ logging.getLogger().addHandler(console)
 
 
 # logging general information
-logging.info(f'\n***************** {args.input.upper()} **************')
+logging.info(f'\n***************** {args.N} - {args.K} **************')
 for k, v in args._get_kwargs():
     logging.info(f'{k}: {v}')
 logging.info('--------------------------------')
 
-(N, K), D, T = read_input(args.input)
+input_path = os.path.join("data", f'VRP-N{str(args.N).zfill(3)}-K{str(args.K).zfill(3)}', "B100.ins")
+(N, K), D, T = read_input(input_path)
+# print(input_path)
+# print(T)
 
 
 class GA(object):
@@ -42,7 +47,7 @@ class GA(object):
     
     def initizlize_population(self):
         self.population = []
-        for i in tqdm(range(self.population_size)):
+        for i in range(self.population_size):
             s = list(range(1, N + 1))
             candidate = random_chunk(s, K)
             self.population.append(
@@ -50,7 +55,7 @@ class GA(object):
             )
 
     def evolution(self):
-        for epoch in range(self.n_epochs):
+        for epoch in tqdm(range(self.n_epochs)):
             new_population = self.population
             s = list(range(0, self.population_size))
             random.shuffle(s)
@@ -87,10 +92,8 @@ class GA(object):
             new_population.sort(key=lambda tup: tup[1])
             self.population = new_population[0:self.population_size]
 
-            logging.info(f"EPOCHS {epoch} - BEST FITNESS: {self.population[0][1]}")
-            # print("Top 10 best candidates:")
-            # for i in range(10):
-            #     print(f"{self.population[i]}: {self.population[i][1]}")
+    def get_best_fitness(self):
+        return self.population[0][-1]
 
 
 def fitness(candidate: list) -> int:
@@ -100,6 +103,8 @@ def fitness(candidate: list) -> int:
             path_costs.append(0)
         else:
             s = 0
+            # print(T)
+            # print(path)
             s += T[0][path[0]]
             for i in range(len(path) - 1):
                 s += T[path[i]][path[i + 1]]
@@ -226,18 +231,24 @@ def mutate_outside_path(root: list):
     new_candidate[path_id] = root[path_id][0:start] + root[path_id][start + gens_len:]
     return new_candidate
 
-ga = GA()
-ga.initizlize_population()
-ga.evolution()
 
-s = logs_path.split("/")
-s = s[0:-1]
-summary_file = os.path.join(s[0], s[1], "summary.txt")
-with open(summary_file, 'a') as f:
-    if args.id == 0:
-        t = logs_path + ","
-        t = t.replace("_", "")
-        f.write(t)
-    f.writelines(str(ga.population[0][-1]) + ",")
-    if args.id == 9:
-        f.write("\n")
+F = []
+Time = []
+for _ in range(args.repeat):
+    t1 = time.time()
+    ga = GA()
+    ga.initizlize_population()
+    ga.evolution()
+    t2 = time.time()
+
+    F.append(ga.get_best_fitness())
+    Time.append(t2 - t1)
+
+F = np.array(F)
+Time = np.array(Time)
+logging.info(f"f_min: {F.min()}")
+logging.info(f"f_max: {F.max()}")
+logging.info(f"f_avg: {F.mean()}")
+logging.info(f"std_dev: {F.std()}")
+logging.info(f"t_avg: {Time.mean()}")
+logging.info("Completed")
