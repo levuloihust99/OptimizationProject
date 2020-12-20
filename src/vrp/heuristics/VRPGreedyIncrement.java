@@ -1,5 +1,6 @@
 package vrp.heuristics;
 
+import java.io.PrintStream;
 import java.util.HashSet;
 import java.util.Iterator;
 
@@ -35,6 +36,20 @@ public class VRPGreedyIncrement {
 		for (int i = 0; i < Config.N; i++) {
 			incrementalGenerate();
 		}
+	}
+	
+	public void run(PrintStream pStr) {
+		this.init();
+		long start = System.currentTimeMillis();
+		this.greedyBuild();
+		long end = System.currentTimeMillis();
+//		this.maintainSet.iterator().next().printIndi();
+		pStr.println("Objective: " + this.maintainSet.iterator().next().getFitness());
+		pStr.println("Elapsed: " + (end - start));
+		pStr.println("-----------------------------------");
+		System.out.println("Objective: " + this.maintainSet.iterator().next().getFitness());
+		System.out.println("Elapsed: " + (end - start));
+		System.out.println("-----------------------------------");
 	}
 	
 	public static void main(String[] args) {

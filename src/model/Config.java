@@ -6,7 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class Config {
-	public static final String fileName = "data/VRP-N014-K006/B20000.ins";
+	public static String fileName = "data/VRP-N014-K006/data.txt";
 	private static boolean flag = true;
 	public static int K;
 	public static int N;
@@ -49,5 +49,10 @@ public class Config {
 			_runConfiguration();
 			flag = false;
 		}
+	}
+	
+	public static void runConfiguration(String fileName) {
+		Config.fileName = fileName;
+		_runConfiguration();
 	}
 }

@@ -1,6 +1,7 @@
 package vrp.ortools;
 
 import java.io.IOException;
+import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -83,7 +84,7 @@ public class VRPLinearV2 {
 		model = new MPSolver("VRPSchedule", MPSolver.OptimizationProblemType.valueOf("SAT_INTEGER_PROGRAMMING"));
 //		model = new MPSolver("VRPSchedule", MPSolver.OptimizationProblemType.valueOf("CBC_MIXED_INTEGER_PROGRAMMING"));
 		X = new MPVariable[N + 2][N + 2];
-		Y = new MPVariable[N + 2];
+		Y = new MPVariable[N + 1];
 		
 		for (int i = 0; i < N + 2; i++) {
 			for (int j = 0; j < N + 2; j++) {
@@ -91,7 +92,7 @@ public class VRPLinearV2 {
 			}
 		}
 		
-		for (int i = 0; i < N + 2; i++) {
+		for (int i = 0; i < N + 1; i++) {
 			Y[i] = model.makeIntVar(0, maxCost, "Y[" + i + "]");
 		}
 		
@@ -170,9 +171,10 @@ public class VRPLinearV2 {
 	}
 	
 	public void solve() {
-		MPSolver.ResultStatus status = model.solve();
-		System.out.println("Status = " + status);
-		System.out.println("-----------------------------------------------------");
+		model.solve();
+//		MPSolver.ResultStatus status = model.solve();
+//		System.out.println("Status = " + status);
+//		System.out.println("-----------------------------------------------------");
 	}
 	
 	public void printResult() {
@@ -215,6 +217,18 @@ public class VRPLinearV2 {
 			System.out.println();
 			System.out.println("-----------------------------------------------------");
 		}
+	}
+	
+	public void run(PrintStream pStr) {
+		Loader.loadNativeLibraries();
+		this.readData();
+		this.stateModel();
+		long start = System.currentTimeMillis();
+		this.solve();
+		long end = System.currentTimeMillis();
+		pStr.println("Time elapsed: " + (end - start));
+		pStr.println("Objective: " + Z.solutionValue());
+		pStr.println("-----------------------------------------------------");
 	}
 	
 	public static void main(String[] args) {

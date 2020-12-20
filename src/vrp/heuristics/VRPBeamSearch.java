@@ -1,5 +1,6 @@
 package vrp.heuristics;
 
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -87,6 +88,29 @@ public class VRPBeamSearch {
 		}
 		
 		opt.printIndi();
+	}
+	
+	public void run(PrintStream pStr) {
+		this.init();
+		long start = System.currentTimeMillis();
+		this.beamSearch();
+		long end = System.currentTimeMillis();
+		Iterator<Individual> it = maintainSet.iterator();
+		Individual opt = it.next();
+		int minFitness = opt.getFitness();
+		while (it.hasNext()) {
+			Individual indi = it.next();
+			if (minFitness > indi.getFitness()) {
+				minFitness = indi.getFitness();
+				opt = indi;
+			}
+		}
+		pStr.println("Objective: " + opt.getFitness());
+		pStr.println("Elapsed: " + (end - start));
+		pStr.println("-------------------------------");
+		System.out.println("Objective: " + opt.getFitness());
+		System.out.println("Elapsed: " + (end - start));
+		System.out.println("-------------------------------");
 	}
 	
 	public static void main(String[] args) {

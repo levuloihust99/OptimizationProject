@@ -1,6 +1,7 @@
 package vrp.ortools;
 
 import java.io.IOException;
+import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -204,6 +205,18 @@ public class VRPLinear {
 		
 		System.out.println("-----------------------------------------------------");
 		System.out.println("Objective = " + Z.solutionValue() + "\n");
+	}
+	
+	public void run(PrintStream pStr) {
+		Loader.loadNativeLibraries();
+		this.readData();
+		this.stateModel();
+		long start = System.currentTimeMillis();
+		this.solve();
+		long end = System.currentTimeMillis();
+		pStr.println("Elapsed: " + (end - start));
+		pStr.println("Objective: " + Z.solutionValue());
+		pStr.println("-----------------------------------------------------");
 	}
 	
 	public static void main(String[] args) {

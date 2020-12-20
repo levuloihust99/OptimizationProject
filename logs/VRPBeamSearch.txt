@@ -1,0 +1,360 @@
+data/VRP-N006-K002/B100.ins#0
+Objective: 351
+Elapsed: 2
+-------------------------------
+data/VRP-N006-K002/B100.ins#1
+Objective: 351
+Elapsed: 0
+-------------------------------
+data/VRP-N006-K002/B100.ins#2
+Objective: 351
+Elapsed: 0
+-------------------------------
+data/VRP-N006-K002/B100.ins#3
+Objective: 351
+Elapsed: 0
+-------------------------------
+data/VRP-N006-K002/B100.ins#4
+Objective: 351
+Elapsed: 0
+-------------------------------
+data/VRP-N006-K002/B100.ins#5
+Objective: 351
+Elapsed: 0
+-------------------------------
+data/VRP-N006-K002/B100.ins#6
+Objective: 351
+Elapsed: 0
+-------------------------------
+data/VRP-N006-K002/B100.ins#7
+Objective: 351
+Elapsed: 0
+-------------------------------
+data/VRP-N006-K002/B100.ins#8
+Objective: 351
+Elapsed: 1
+-------------------------------
+data/VRP-N006-K002/B100.ins#9
+Objective: 351
+Elapsed: 0
+-------------------------------
+data/VRP-N014-K006/B100.ins#0
+Objective: 219
+Elapsed: 11
+-------------------------------
+data/VRP-N014-K006/B100.ins#1
+Objective: 219
+Elapsed: 9
+-------------------------------
+data/VRP-N014-K006/B100.ins#2
+Objective: 219
+Elapsed: 8
+-------------------------------
+data/VRP-N014-K006/B100.ins#3
+Objective: 219
+Elapsed: 6
+-------------------------------
+data/VRP-N014-K006/B100.ins#4
+Objective: 219
+Elapsed: 6
+-------------------------------
+data/VRP-N014-K006/B100.ins#5
+Objective: 219
+Elapsed: 5
+-------------------------------
+data/VRP-N014-K006/B100.ins#6
+Objective: 219
+Elapsed: 5
+-------------------------------
+data/VRP-N014-K006/B100.ins#7
+Objective: 219
+Elapsed: 5
+-------------------------------
+data/VRP-N014-K006/B100.ins#8
+Objective: 219
+Elapsed: 4
+-------------------------------
+data/VRP-N014-K006/B100.ins#9
+Objective: 219
+Elapsed: 4
+-------------------------------
+data/VRP-N049-K009/B100.ins#0
+Objective: 429
+Elapsed: 121
+-------------------------------
+data/VRP-N049-K009/B100.ins#1
+Objective: 441
+Elapsed: 85
+-------------------------------
+data/VRP-N049-K009/B100.ins#2
+Objective: 417
+Elapsed: 66
+-------------------------------
+data/VRP-N049-K009/B100.ins#3
+Objective: 438
+Elapsed: 61
+-------------------------------
+data/VRP-N049-K009/B100.ins#4
+Objective: 449
+Elapsed: 58
+-------------------------------
+data/VRP-N049-K009/B100.ins#5
+Objective: 419
+Elapsed: 53
+-------------------------------
+data/VRP-N049-K009/B100.ins#6
+Objective: 442
+Elapsed: 52
+-------------------------------
+data/VRP-N049-K009/B100.ins#7
+Objective: 424
+Elapsed: 41
+-------------------------------
+data/VRP-N049-K009/B100.ins#8
+Objective: 447
+Elapsed: 47
+-------------------------------
+data/VRP-N049-K009/B100.ins#9
+Objective: 439
+Elapsed: 29
+-------------------------------
+data/VRP-N099-K020/B100.ins#0
+Objective: 347
+Elapsed: 178
+-------------------------------
+data/VRP-N099-K020/B100.ins#1
+Objective: 356
+Elapsed: 172
+-------------------------------
+data/VRP-N099-K020/B100.ins#2
+Objective: 362
+Elapsed: 206
+-------------------------------
+data/VRP-N099-K020/B100.ins#3
+Objective: 341
+Elapsed: 139
+-------------------------------
+data/VRP-N099-K020/B100.ins#4
+Objective: 355
+Elapsed: 138
+-------------------------------
+data/VRP-N099-K020/B100.ins#5
+Objective: 339
+Elapsed: 131
+-------------------------------
+data/VRP-N099-K020/B100.ins#6
+Objective: 353
+Elapsed: 132
+-------------------------------
+data/VRP-N099-K020/B100.ins#7
+Objective: 347
+Elapsed: 166
+-------------------------------
+data/VRP-N099-K020/B100.ins#8
+Objective: 345
+Elapsed: 170
+-------------------------------
+data/VRP-N099-K020/B100.ins#9
+Objective: 334
+Elapsed: 136
+-------------------------------
+data/VRP-N499-K020/B100.ins#0
+Objective: 1528
+Elapsed: 5665
+-------------------------------
+data/VRP-N499-K020/B100.ins#1
+Objective: 1536
+Elapsed: 5149
+-------------------------------
+data/VRP-N499-K020/B100.ins#2
+Objective: 1532
+Elapsed: 4951
+-------------------------------
+data/VRP-N499-K020/B100.ins#3
+Objective: 1528
+Elapsed: 5832
+-------------------------------
+data/VRP-N499-K020/B100.ins#4
+Objective: 1546
+Elapsed: 5431
+-------------------------------
+data/VRP-N499-K020/B100.ins#5
+Objective: 1554
+Elapsed: 6211
+-------------------------------
+data/VRP-N499-K020/B100.ins#6
+Objective: 1551
+Elapsed: 5671
+-------------------------------
+data/VRP-N499-K020/B100.ins#7
+Objective: 1531
+Elapsed: 5688
+-------------------------------
+data/VRP-N499-K020/B100.ins#8
+Objective: 1520
+Elapsed: 6003
+-------------------------------
+data/VRP-N499-K020/B100.ins#9
+Objective: 1536
+Elapsed: 5634
+-------------------------------
+data/VRP-N499-K050/B100.ins#0
+Objective: 659
+Elapsed: 10454
+-------------------------------
+data/VRP-N499-K050/B100.ins#1
+Objective: 670
+Elapsed: 10597
+-------------------------------
+data/VRP-N499-K050/B100.ins#2
+Objective: 661
+Elapsed: 10707
+-------------------------------
+data/VRP-N499-K050/B100.ins#3
+Objective: 656
+Elapsed: 9528
+-------------------------------
+data/VRP-N499-K050/B100.ins#4
+Objective: 654
+Elapsed: 9672
+-------------------------------
+data/VRP-N499-K050/B100.ins#5
+Objective: 667
+Elapsed: 9711
+-------------------------------
+data/VRP-N499-K050/B100.ins#6
+Objective: 666
+Elapsed: 9690
+-------------------------------
+data/VRP-N499-K050/B100.ins#7
+Objective: 661
+Elapsed: 11492
+-------------------------------
+data/VRP-N499-K050/B100.ins#8
+Objective: 655
+Elapsed: 13719
+-------------------------------
+data/VRP-N499-K050/B100.ins#9
+Objective: 675
+Elapsed: 13875
+-------------------------------
+data/VRP-N999-K020/B100.ins#0
+Objective: 3017
+Elapsed: 56387
+-------------------------------
+data/VRP-N999-K020/B100.ins#1
+Objective: 3023
+Elapsed: 41841
+-------------------------------
+data/VRP-N999-K020/B100.ins#2
+Objective: 3019
+Elapsed: 37376
+-------------------------------
+data/VRP-N999-K020/B100.ins#3
+Objective: 3002
+Elapsed: 36026
+-------------------------------
+data/VRP-N999-K020/B100.ins#4
+Objective: 3011
+Elapsed: 37211
+-------------------------------
+data/VRP-N999-K020/B100.ins#5
+Objective: 2996
+Elapsed: 35932
+-------------------------------
+data/VRP-N999-K020/B100.ins#6
+Objective: 2988
+Elapsed: 38172
+-------------------------------
+data/VRP-N999-K020/B100.ins#7
+Objective: 2987
+Elapsed: 42972
+-------------------------------
+data/VRP-N999-K020/B100.ins#8
+Objective: 2994
+Elapsed: 41722
+-------------------------------
+data/VRP-N999-K020/B100.ins#9
+Objective: 2980
+Elapsed: 36925
+-------------------------------
+data/VRP-N999-K050/B100.ins#0
+Objective: 1250
+Elapsed: 45884
+-------------------------------
+data/VRP-N999-K050/B100.ins#1
+Objective: 1238
+Elapsed: 50007
+-------------------------------
+data/VRP-N999-K050/B100.ins#2
+Objective: 1230
+Elapsed: 63826
+-------------------------------
+data/VRP-N999-K050/B100.ins#3
+Objective: 1253
+Elapsed: 52944
+-------------------------------
+data/VRP-N999-K050/B100.ins#4
+Objective: 1262
+Elapsed: 53527
+-------------------------------
+data/VRP-N999-K050/B100.ins#5
+Objective: 1243
+Elapsed: 44013
+-------------------------------
+data/VRP-N999-K050/B100.ins#6
+Objective: 1245
+Elapsed: 53965
+-------------------------------
+data/VRP-N999-K050/B100.ins#7
+Objective: 1256
+Elapsed: 45710
+-------------------------------
+data/VRP-N999-K050/B100.ins#8
+Objective: 1236
+Elapsed: 49788
+-------------------------------
+data/VRP-N999-K050/B100.ins#9
+Objective: 1244
+Elapsed: 48344
+-------------------------------
+data/VRP-N999-K100/B100.ins#0
+Objective: 662
+Elapsed: 109211
+-------------------------------
+data/VRP-N999-K100/B100.ins#1
+Objective: 661
+Elapsed: 89987
+-------------------------------
+data/VRP-N999-K100/B100.ins#2
+Objective: 670
+Elapsed: 105907
+-------------------------------
+data/VRP-N999-K100/B100.ins#3
+Objective: 668
+Elapsed: 100351
+-------------------------------
+data/VRP-N999-K100/B100.ins#4
+Objective: 666
+Elapsed: 93620
+-------------------------------
+data/VRP-N999-K100/B100.ins#5
+Objective: 663
+Elapsed: 106478
+-------------------------------
+data/VRP-N999-K100/B100.ins#6
+Objective: 663
+Elapsed: 101764
+-------------------------------
+data/VRP-N999-K100/B100.ins#7
+Objective: 654
+Elapsed: 108778
+-------------------------------
+data/VRP-N999-K100/B100.ins#8
+Objective: 659
+Elapsed: 98677
+-------------------------------
+data/VRP-N999-K100/B100.ins#9
+Objective: 656
+Elapsed: 94302
+-------------------------------
